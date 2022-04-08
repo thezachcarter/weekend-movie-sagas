@@ -33,7 +33,6 @@ function MovieList() {
                                 src={movie.poster} 
                                 alt={movie.title}
                                 onClick={((event) => handleClick(movie.id))}
-                                
                             />
                            
                         </div>
