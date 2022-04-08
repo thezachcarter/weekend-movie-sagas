@@ -8,7 +8,8 @@ function MovieList() {
     const movies = useSelector(store => store.movies);
 
     const handleClick = (movieId) => {
-        console.log('clicked', movieId);
+        console.log('clicked poster in list', movieId);
+        dispatch({type: 'GET_DETAILS', payload: movieId})
     }
 
     useEffect(() => {
