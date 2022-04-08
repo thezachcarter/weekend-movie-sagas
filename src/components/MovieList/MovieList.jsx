@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+
 
 function MovieList() {
 
@@ -10,6 +12,7 @@ function MovieList() {
     const handleClick = (movieId) => {
         console.log('clicked poster in list', movieId);
         dispatch({type: 'GET_DETAILS', payload: movieId})
+        
     }
 
     useEffect(() => {
@@ -24,11 +27,14 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
+                            <Link to='/details'>
                             <img 
                                 src={movie.poster} 
                                 alt={movie.title}
                                 onClick={((event) => handleClick(movie.id))}
+                                
                             />
+                            </Link>
                         </div>
                     );
                 })}
