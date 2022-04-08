@@ -30,6 +30,7 @@ function* fetchAllMovies() {
 }
 
 function* getDetails(action){
+    //getDetails of selected movie
     try{
         console.log('in index getDetails', action.payload);
         const details = yield axios.get(`/api/movie/${action.payload}`)
