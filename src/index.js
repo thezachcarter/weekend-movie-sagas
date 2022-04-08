@@ -34,8 +34,11 @@ function* getDetails(action){
     try{
         console.log('in index getDetails', action.payload);
         const details = yield axios.get(`/api/movie/${action.payload}`)
+        const genres = yield axios.get(`/api/genre/${action.payload}`)
         yield put({ type: 'SET_DETAILS', payload: details.data})
+        yield put({ type: 'SET_GENRES', payload: genres.data})
         console.log('movie details', details.data);
+        console.log('movie details', genres.data);
     } catch(err){
         console.log('error in index getDetails', err);
         

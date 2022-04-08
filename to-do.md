@@ -6,7 +6,7 @@
 [x] When poster on home/list page is clicked, direct to Details page of clicked movie  
 
 ## Details Page
-[ ] Page should have ALL genres, title, description, and the image for the selected movie 
+[x] Page should have ALL genres, title, description, and the image for the selected movie 
     [x]Use Sagas and Redux to handle these requests and data
 [x]The details page should have a Back to List button
 [x]Base functionality does not require the movie details to load correctly after refresh of the browser.

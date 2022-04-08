@@ -20,7 +20,16 @@ function MovieDetails() {
             <button onClick={handleBack}>Back To Movies</button>
             <h1>{details[0]?.title}</h1>
             <img src={details[0]?.poster}/>
-            <h2>Genre:</h2>
+            <div>
+                <h3>Genre:</h3>
+                {genres.map(genre => {
+                    console.log(genre);
+                    return (
+                        <div key={genre.id} >
+                            <h3>{genre.name}</h3>
+                        </div> 
+                    )})}           
+            </div>
             <p>Synopsis: {details[0]?.description}</p>
         </div>
     )
