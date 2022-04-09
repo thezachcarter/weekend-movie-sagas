@@ -7,4 +7,33 @@ $silver : #ECF1F2;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    // background-color: $black;
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    .card {
+        margin: 1em;
+        box-shadow: 0 .25em .5em 0 $gold;
+        transition: 0.3s;
+        padding: 1em;
+        text-align: center;
+        background-color: $silver;
+        
+        .poster{
+            width: 11.5em;
+            height: 17.25em;
+            border: 2px solid $black;
+        }
+        
+        .title {
+                background-color: $silver;
+                text-align: center;   
+                margin-top: 0.5em;
+                width: 100% 
+            }
+    }
 }

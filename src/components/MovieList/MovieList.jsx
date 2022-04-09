@@ -23,25 +23,26 @@ function MovieList() {
     return (
         <main>
             <h1>MovieList</h1>
-            <section className="movies">
+            <div className="grid">
                 {movies.map(movie => {
                     return (
-                        <div className="card" key={movie.id} >
-                            
-                            <img 
-                                src={movie.poster} 
-                                alt={movie.title}
-                                onClick={((event) => handleClick(movie.id))}
-                            />
-
-                            <div className="title">
-                            <h3>{movie.title}</h3>
+                        // <div className=>
+                            <div className="card" key={movie.id} >
+                                <img
+                                    className="poster" 
+                                    src={movie.poster} 
+                                    alt={movie.title}
+                                    onClick={((event) => handleClick(movie.id))}
+                                />
+                                <div className="titleContainer">
+                                    <h3 className="title">{movie.title}</h3>
+                                </div>
                             </div>
-
-                        </div>
+                        // </div>
+                        
                     );
                 })}
-            </section>
+            </div>
         </main>
 
     );
