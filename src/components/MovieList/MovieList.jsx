@@ -22,7 +22,6 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
             <div className="grid">
                 {movies.map(movie => {
                     return (

@@ -16,22 +16,25 @@ function MovieDetails() {
     console.log('movie details', details);
     console.log('movie genres', genres);
     return (
-        <div>
-            <button onClick={handleBack}>Back To Movies</button>
-            <h1>{details[0]?.title}</h1>
-            <img src={details[0]?.poster} />
-            <div>
-                <h3>Genre:</h3>
+        <div className="detailsContainer">
+            <button className="detailsBtn" onClick={handleBack}>
+                <span className="back">🔙</span><br></br>MOVIE<br></br>LIST</button>
+            
+            <div className="detailsCard">
+            <h1 className="detailsText">{details[0]?.title}</h1>
+            <img className="detailsImg" src={details[0]?.poster} />
+                <h3 className="detailsText">Genre(s):</h3>
                 {genres.map(genre => {
                     console.log(genre);
                     return (
                         <div key={genre.id} >
-                            <h3>{genre.name}</h3>
+                            <h4 className="detailsText">{genre.name}</h4>
                         </div>
                     )
                 })}
+                <p className="detailsText">Synopsis: {details[0]?.description}</p>
             </div>
-            <p>Synopsis: {details[0]?.description}</p>
+            
         </div>
     )
 }
