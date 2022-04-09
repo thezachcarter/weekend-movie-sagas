@@ -26,15 +26,18 @@ function MovieList() {
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
+                        <div className="card" key={movie.id} >
                             
                             <img 
                                 src={movie.poster} 
                                 alt={movie.title}
                                 onClick={((event) => handleClick(movie.id))}
                             />
-                           
+
+                            <div className="title">
+                            <h3>{movie.title}</h3>
+                            </div>
+
                         </div>
                     );
                 })}
