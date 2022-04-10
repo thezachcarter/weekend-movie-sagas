@@ -33,18 +33,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "description": "[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thezachcarter/weekend-movie-sagas.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thezachcarter/weekend-movie-sagas/issues"
-  },
-  "homepage": "https://github.com/thezachcarter/weekend-movie-sagas#readme"
-}
+  ]}
+
