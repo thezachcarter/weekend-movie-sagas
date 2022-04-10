@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './MovieList.css'
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 
 
@@ -25,7 +24,6 @@ function MovieList() {
             <div className="grid">
                 {movies.map(movie => {
                     return (
-                        // <div className=>
                             <div className="card" key={movie.id} >
                                 <img
                                     className="poster" 
@@ -37,8 +35,6 @@ function MovieList() {
                                     <h3 className="title">{movie.title}</h3>
                                 </div>
                             </div>
-                        // </div>
-                        
                     );
                 })}
             </div>

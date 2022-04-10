@@ -1,5 +1,4 @@
 $black : #090A0E;
-$red : #760504;
 $gold : #FBDC6A;
 $silver : #ECF1F2;
 
@@ -19,9 +18,12 @@ $deepShadow : 0 2em 4em 0 $gold;
     color: $silver;
     font-weight: bolder;
     height: 4em;
+    margin-top: 2em;
     text-align: center;
     line-height: 4em;
-    font-family: serif;
+    text-decoration: dashed underline overline;
+    text-decoration-color: $silver;
+    text-decoration-thickness: 0.25em;
 }
 
 .grid{
@@ -35,6 +37,7 @@ $deepShadow : 0 2em 4em 0 $gold;
         padding: 1em;
         text-align: center;
         background-color: $silver;
+        box-shadow: $softShadow;
 
         .poster{
             width: 11.5em;
@@ -73,19 +76,23 @@ $deepShadow : 0 2em 4em 0 $gold;
         background-color: $silver;
         width: auto;
         height: auto;
-        box-shadow: $deepShadow;
+        box-shadow: $softShadow;
         padding: 1em;
     }
 
     .detailsBtn{
         background-color: $silver;
-        height: 8em;
-        width: 8em;
-        border-radius: 4em;
+        height: 6em;
+        width: 9em;
+        border-radius: 1em;
         align-items: center;
         justify-content: center;
         margin: auto;
         font-weight: bolder;
+        box-shadow: $softShadow;
+            &:hover{
+                box-shadow: $deepShadow;
+            }
 
         .back{
             background-color: #ECF1F2;
@@ -98,6 +105,7 @@ $deepShadow : 0 2em 4em 0 $gold;
         align-items: center;
         justify-content: center;
         margin: auto;
+        box-shadow: $deepShadow;
     }
     .detailsText{
         background-color: $silver; 

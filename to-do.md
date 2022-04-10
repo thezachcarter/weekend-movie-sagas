@@ -16,6 +16,7 @@
 [x] Grid for movie list
 [x] Cards for movie list
 [x] SASS 
+[ ] improve responsiveness of grid
 
 ## WRAP-UP
 [ ] Format/Refactor
@@ -23,7 +24,5 @@
 [ ] Test
 
 # Stretch Goals
-[ ] Form to add movies
 [ ] Refresh on Details Page, maintain content
-[ ] Edit movie details page
-[ ] See instructions for more ideas
+
