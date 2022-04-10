@@ -13,9 +13,9 @@
 [x]Hint : You can make a GET request for a specific movie. Remember req.params and :id?
 
 ## Styling
-[ ] Grid for movie list
-[ ] Cards for movie list
-[ ] SASS 
+[x] Grid for movie list
+[x] Cards for movie list
+[x] SASS 
 
 ## WRAP-UP
 [ ] Format/Refactor
