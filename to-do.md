@@ -19,9 +19,9 @@
 [x] improve responsiveness of grid
 
 ## WRAP-UP
-[ ] Format/Refactor
+[x] Format/Refactor
 [ ] ReadMe
-[ ] Test
+[x] Test
 
 # Stretch Goals
 [ ] Refresh on Details Page, maintain content
