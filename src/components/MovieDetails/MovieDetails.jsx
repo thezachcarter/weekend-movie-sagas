@@ -9,6 +9,7 @@ function MovieDetails() {
     const details = useSelector(store => store.details)
     const genres = useSelector(store => store.genres)
 
+    //return to MovieList view
     const handleBack = () => {
         history.push('/')
     }
@@ -19,11 +20,12 @@ function MovieDetails() {
         <div className="detailsContainer">
             <button className="detailsBtn" onClick={handleBack}>
                 <span className="back">🔙</span><br></br>MOVIE<br></br>LIST</button>
-            
+
             <div className="detailsCard">
-            <h1 className="detailsText">{details[0]?.title}</h1>
-            <img className="detailsImg" src={details[0]?.poster} />
+                <h1 className="detailsText">{details[0]?.title}</h1>
+                <img className="detailsImg" src={details[0]?.poster} />
                 <h3 className="detailsText">Genre(s):</h3>
+                {/* loop through genres and display to DOM */}
                 {genres.map(genre => {
                     console.log(genre);
                     return (
@@ -34,7 +36,7 @@ function MovieDetails() {
                 })}
                 <p className="detailsText">Synopsis: {details[0]?.description}</p>
             </div>
-            
+
         </div>
     )
 }

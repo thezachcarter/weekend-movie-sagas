@@ -2,6 +2,7 @@ $black : #090A0E;
 $gold : #FBDC6A;
 $silver : #ECF1F2;
 
+//shadow effects. deep shadow on hover over clickables
 $softShadow : 0 .25em .5em 0 $gold;
 $deepShadow : 0 2em 4em 0 $gold;
 
@@ -13,7 +14,7 @@ $deepShadow : 0 2em 4em 0 $gold;
     font-family: sans-serif;
 }
 
-.header{
+.header {
     background: $black;
     color: $silver;
     font-weight: bolder;
@@ -26,10 +27,11 @@ $deepShadow : 0 2em 4em 0 $gold;
     text-decoration-thickness: 0.25em;
 }
 
-.grid{
+.grid {
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
     .card {
         margin: 1em;
@@ -39,39 +41,39 @@ $deepShadow : 0 2em 4em 0 $gold;
         background-color: $silver;
         box-shadow: $softShadow;
 
-        .poster{
+        .poster {
             width: 11.5em;
             height: 17.25em;
             border: 2px solid $black;
             box-shadow: $softShadow;
-                &:hover{
-                    padding: 0;
-                    margin: -0.5em;
-                    width: 12em;
-                    height: 18em;
-                    box-shadow: $deepShadow;
-                }
-        }
-        
-        .title {
-                background-color: $silver;
-                text-align: center;   
-                margin-top: 0.5em;
-                width: 100% 
+            //shadow effect
+            &:hover {
+                padding: 0;
+                margin: -0.5em;
+                width: 12em;
+                height: 18em;
+                box-shadow: $deepShadow;
             }
+        }
+
+        .title {
+            background-color: $silver;
+            text-align: center;
+            margin-top: 0.5em;
+            width: 100%
+        }
     }
 }
 
-.detailsContainer{
+.detailsContainer {
     background-color: $black;
     height: auto;
     width: auto;
     text-align: center;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    
 
-    .detailsCard{
+    .detailsCard {
         grid-column-start: 2;
         background-color: $silver;
         width: auto;
@@ -80,43 +82,45 @@ $deepShadow : 0 2em 4em 0 $gold;
         padding: 1em;
     }
 
-    .detailsBtn{
+    .detailsBtn {
         background-color: $silver;
         height: 6em;
-        width: 9em;
+        width: 6em;
         border-radius: 1em;
-        align-items: center;
-        justify-content: center;
         margin: auto;
         font-weight: bolder;
         box-shadow: $softShadow;
-            &:hover{
-                box-shadow: $deepShadow;
-            }
+        //shadow effect
+        &:hover {
+            box-shadow: $deepShadow;
+        }
 
-        .back{
+        .back {
             background-color: #ECF1F2;
             font-size: 2em;
         }
 
     }
-    .detailsImg{
+
+    .detailsImg {
         grid-column: 2 / 3;
         align-items: center;
         justify-content: center;
         margin: auto;
         box-shadow: $deepShadow;
     }
-    .detailsText{
-        background-color: $silver; 
+
+    .detailsText {
+        background-color: $silver;
     }
 
-    p{
+    p {
         padding: 1em;
     }
 
-    h1, h3{
+    h1,
+    h3 {
         padding: .5em;
     }
-    
+
 }

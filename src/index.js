@@ -30,7 +30,7 @@ function* fetchAllMovies() {
 }
 
 function* getDetails(action) {
-    //getDetails of selected movie
+    //getDetails and genres of selected movie
     try {
         console.log('in index getDetails', action.payload);
         const details = yield axios.get(`/api/movie/${action.payload}`)
@@ -48,7 +48,7 @@ function* getDetails(action) {
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
-// Used to store movies returned from the server
+//movies reducer
 const movies = (state = [], action) => {
     switch (action.type) {
         case 'SET_MOVIES':
@@ -58,6 +58,7 @@ const movies = (state = [], action) => {
     }
 }
 
+//details reducer
 const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':
@@ -67,7 +68,7 @@ const details = (state = [], action) => {
     }
 }
 
-// Used to store the movie genres
+//genres reducer
 const genres = (state = [], action) => {
     switch (action.type) {
         case 'SET_GENRES':

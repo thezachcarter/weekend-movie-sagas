@@ -16,7 +16,7 @@
 [x] Grid for movie list
 [x] Cards for movie list
 [x] SASS 
-[ ] improve responsiveness of grid
+[x] improve responsiveness of grid
 
 ## WRAP-UP
 [ ] Format/Refactor
