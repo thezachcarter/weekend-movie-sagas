@@ -12,7 +12,7 @@ function MovieList() {
     const handleClick = (movieId) => {
         console.log('clicked poster in list', movieId);
         dispatch({ type: 'GET_DETAILS', payload: movieId })
-        history.push('/details')
+        history.push(`/details/${movieId}`)
     }
 
     useEffect(() => {

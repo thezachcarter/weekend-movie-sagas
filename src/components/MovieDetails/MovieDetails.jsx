@@ -1,18 +1,29 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
+import { HashRouter as Router, Route, useParams, useHistory } from 'react-router-dom';
+
 
 function MovieDetails() {
     const history = useHistory();
+    const dispatch = useDispatch();
 
     //store.details = array w/ single object containing selected movie details
     const details = useSelector(store => store.details)
     const genres = useSelector(store => store.genres)
 
+    const {id} = useParams();
+
     //return to MovieList view
     const handleBack = () => {
         history.push('/')
     }
+
+    console.log(id);
+    useEffect(() => {
+        dispatch({
+        type: 'GET_DETAILS',
+        payload: id});
+    }, [] )
 
     console.log('movie details', details);
     console.log('movie genres', genres);
