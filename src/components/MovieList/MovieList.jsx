@@ -32,9 +32,9 @@ function MovieList() {
                                 alt={movie.title}
                                 onClick={((event) => handleClick(movie.id))}
                             />
-                            <div className="titleContainer">
+                            {/* <div className="titleContainer">
                                 <h3 className="title">{movie.title}</h3>
-                            </div>
+                            </div> */}
                         </div>
                     );
                 })}
