@@ -2,6 +2,12 @@
 ## Description
 
 This app is designed to allow users to select a movie from the database and access additional content pertaining to the selected movie. This additional content includes a description from the same database as the movie and a list of genres from a joined database.
+
+To see the fully functional site, please visit: https://powerful-taiga-14447.herokuapp.com/
+
+## Screen Shot
+
+![Alt text](./public/images/screenshot.jpg?raw=true "screenshot")
 ## Installation
 
 1. Create a database named `saga_movies_weekend`,
@@ -19,3 +25,4 @@ the details of the movie you selected will be displayed.
 ## Built With
 
 HTML, CSS, JS, Node.js, Express, Axios, React, Redux, Redux Saga, Postgres, Sass 
+
